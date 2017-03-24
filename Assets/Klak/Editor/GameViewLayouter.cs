@@ -123,6 +123,8 @@ namespace Klak
         // Instantiate and layout game views based on the setting.
         void LayoutViews()
         {
+            CloseAllViews();
+
             for (var i = 0; i < _table.viewCount; i++)
             {
                 var view = (EditorWindow)ScriptableObject.CreateInstance(GameViewType);
